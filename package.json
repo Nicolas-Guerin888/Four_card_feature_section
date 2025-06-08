@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "npm": "^11.4.1",
+    "sass": "^1.89.1"
+  },
+  "name": "four_card_feature_section",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile-sass": "sass scss/styles.scss css/styles.css",
+    "watch-sass": "sass --watch scss/styles.scss:css/styles.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

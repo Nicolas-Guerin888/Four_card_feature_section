@@ -1,0 +1,55 @@
+@import 'settings';
+
+body {
+    height: 1029px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.header {
+    width: 35%;
+    display: flex;
+    margin-bottom: 74px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $grey-500;
+    &__title {
+        @extend %text-preset-1;
+        margin-bottom: 16px;
+        &--light {
+            @extend %text-preset-2;
+        }
+    }
+    &__text {
+        @extend %text-preset-4;
+        text-align: center;
+    }
+}
+
+
+/*
+@mixin card-style ($border-color, $grid-area) {
+    width: 350px;
+    height: 250px;
+
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 32px;
+    &__card {
+        grid-column-start: 1;
+        width: 350px;
+        height: 250px;
+    }
+}
+
+.card {
+    &--supervisor {
+        @include card-style($cyan, 1)
+    }
+}
+    */
