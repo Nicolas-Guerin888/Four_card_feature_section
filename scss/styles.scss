@@ -6,8 +6,12 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     @media (max-width: 1285px){
         height: 1206px;
+    }
+    @media (max-width: 750px){
+        height: 1405px;
     }
 
     .header {
@@ -18,17 +22,30 @@ body {
         justify-content: center;
         align-items: center;
         color: $grey-500;
+
         @media (max-width: 1285px){
             width: 50%;
         }
         @media (max-width: 1285px){
             width: 60%;
         }
+        @media (max-width: 750px) {
+            width: 83%;
+            margin-bottom: 60px;
+        }
         &__title {
             @extend %text-preset-1;
             margin-bottom: 16px;
+
+            @media (max-width: 750px){
+                font-size: 24px;;
+            }
             &--light {
                 @extend %text-preset-2;
+
+                @media (max-width: 750px){
+                    font-size: 24px;
+                }
             }
         }
         &__text {
@@ -43,10 +60,15 @@ body {
         grid-template-rows: 1fr 1fr;
         gap: 32px;
         margin-bottom: 74px;
-        
+
         @media (max-width: 1285px){
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr 1fr 1fr;
+        }
+        @media (max-width: 750px){
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 24px;
         }
         &__card {
             width: 350px;
@@ -82,6 +104,7 @@ body {
             grid-row: 1 / span 2;
             align-self: center;
             border-top: solid 4px $cyan;
+
             @media (max-width: 1200px){
                 grid-column: 1 / span 2;
                 grid-row: 1;
@@ -92,6 +115,7 @@ body {
             grid-column: 2;
             grid-row: 1;
             border-top: solid 4px $red;
+
             @media (max-width: 1200px){
                 grid-column: 1;
                 grid-row: 2;
@@ -101,6 +125,7 @@ body {
             grid-column: 2;
             grid-row: 2;
             border-top: solid 4px $orange;
+
             @media (max-width: 1200px){
                 grid-column: 2;
                 grid-row: 2;
@@ -111,12 +136,17 @@ body {
             grid-row: 1 / span 2;
             align-self: center;
             border-top: solid 4px $blue;
+
             @media (max-width: 1200px){
                 grid-column: 1 / span 2;
                 grid-row: 3;
                 justify-self: center;
             }
         }
+    }
+
+    .footer {
+        text-align: center;
     }
 }
 
