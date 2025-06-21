@@ -6,82 +6,117 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-.header {
-    width: 35%;
-    display: flex;
-    margin-bottom: 74px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: $grey-500;
-    &__title {
-        @extend %text-preset-1;
-        margin-bottom: 16px;
-        &--light {
-            @extend %text-preset-2;
+    @media (max-width: 1285px){
+        height: 1206px;
+    }
+
+    .header {
+        width: 35%;
+        display: flex;
+        margin-bottom: 74px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: $grey-500;
+        @media (max-width: 1285px){
+            width: 50%;
+        }
+        @media (max-width: 1285px){
+            width: 60%;
+        }
+        &__title {
+            @extend %text-preset-1;
+            margin-bottom: 16px;
+            &--light {
+                @extend %text-preset-2;
+            }
+        }
+        &__text {
+            @extend %text-preset-4;
+            text-align: center;
         }
     }
-    &__text {
-        @extend %text-preset-4;
-        text-align: center;
-    }
-}
-.cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 32px;
-    margin-bottom: 74px;
-    &__card {
-        width: 350px;
-        height: 250px;
-        padding: 32px;
-        border-radius: 8px;
-        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 4px;
-    }
-    &__card-title {
-        @extend %text-preset-3;
-        color: $grey-500;
-        margin-bottom: 6px
-    }
-    &__card-description {
-        @extend %text-preset-5;
-        color: $grey-400;
-        margin-bottom: 32px;
-    }
-    &__card-image {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: end;
-    }
-}
+
+    .cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 32px;
+        margin-bottom: 74px;
         
-.card {
-    &--supervisor {
-        grid-column: 1;
-        grid-row: 1 / span 2;
-        align-self: center;
-        border-top: solid 4px $cyan;
+        @media (max-width: 1285px){
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+        }
+        &__card {
+            width: 350px;
+            height: 250px;
+            padding: 32px;
+            border-radius: 8px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 4px;
+            @media (max-width: 1285px){
+                width: 314px;
+            }
+        }
+        &__card-title {
+            @extend %text-preset-3;
+            color: $grey-500;
+            margin-bottom: 6px
+        }
+        &__card-description {
+            @extend %text-preset-5;
+            color: $grey-400;
+            margin-bottom: 32px;
+        }
+        &__card-image {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: end;
+        }
     }
-    &--team-builder {
-        grid-column: 2;
-        grid-row: 1;
-        border-top: solid 4px $red;
-    }
-    &--karma {
-        grid-column: 2;
-        grid-row: 2;
-        border-top: solid 4px $orange;
-    }
-    &--calculator {
-        grid-column: 3;
-        grid-row: 1 / span 2;
-        align-self: center;
-        border-top: solid 4px $blue;
+            
+    .card {
+        &--supervisor {
+            grid-column: 1;
+            grid-row: 1 / span 2;
+            align-self: center;
+            border-top: solid 4px $cyan;
+            @media (max-width: 1200px){
+                grid-column: 1 / span 2;
+                grid-row: 1;
+                justify-self: center;
+            }
+        }
+        &--team-builder {
+            grid-column: 2;
+            grid-row: 1;
+            border-top: solid 4px $red;
+            @media (max-width: 1200px){
+                grid-column: 1;
+                grid-row: 2;
+            }
+        }
+        &--karma {
+            grid-column: 2;
+            grid-row: 2;
+            border-top: solid 4px $orange;
+            @media (max-width: 1200px){
+                grid-column: 2;
+                grid-row: 2;
+            }
+        }
+        &--calculator {
+            grid-column: 3;
+            grid-row: 1 / span 2;
+            align-self: center;
+            border-top: solid 4px $blue;
+            @media (max-width: 1200px){
+                grid-column: 1 / span 2;
+                grid-row: 3;
+                justify-self: center;
+            }
+        }
     }
 }
-
-
 
