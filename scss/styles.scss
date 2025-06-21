@@ -1,4 +1,4 @@
-@import 'settings';
+@use 'settings';
 
 body {
     height: 1029px;
@@ -21,7 +21,7 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        color: $grey-500;
+        color: settings.$grey-500;
 
         @media (max-width: 1285px){
             width: 50%;
@@ -82,12 +82,12 @@ body {
         }
         &__card-title {
             @extend %text-preset-3;
-            color: $grey-500;
+            color: settings.$grey-500;
             margin-bottom: 6px
         }
         &__card-description {
             @extend %text-preset-5;
-            color: $grey-400;
+            color: settings.$grey-400;
             margin-bottom: 32px;
         }
         &__card-image {
@@ -103,7 +103,7 @@ body {
             grid-column: 1;
             grid-row: 1 / span 2;
             align-self: center;
-            border-top: solid 4px $cyan;
+            border-top: solid 4px settings.$cyan;
 
             @media (max-width: 1200px){
                 grid-column: 1 / span 2;
@@ -114,7 +114,7 @@ body {
         &--team-builder {
             grid-column: 2;
             grid-row: 1;
-            border-top: solid 4px $red;
+            border-top: solid 4px settings.$red;
 
             @media (max-width: 1200px){
                 grid-column: 1;
@@ -124,7 +124,7 @@ body {
         &--karma {
             grid-column: 2;
             grid-row: 2;
-            border-top: solid 4px $orange;
+            border-top: solid 4px settings.$orange;
 
             @media (max-width: 1200px){
                 grid-column: 2;
@@ -135,7 +135,7 @@ body {
             grid-column: 3;
             grid-row: 1 / span 2;
             align-self: center;
-            border-top: solid 4px $blue;
+            border-top: solid 4px settings.$blue;
 
             @media (max-width: 1200px){
                 grid-column: 1 / span 2;
