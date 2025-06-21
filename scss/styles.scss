@@ -27,29 +27,61 @@ body {
         text-align: center;
     }
 }
-
-
-/*
-@mixin card-style ($border-color, $grid-area) {
-    width: 350px;
-    height: 250px;
-
-}
-
 .cards {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     gap: 32px;
+    margin-bottom: 74px;
     &__card {
-        grid-column-start: 1;
         width: 350px;
         height: 250px;
+        padding: 32px;
+        border-radius: 8px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 4px;
+    }
+    &__card-title {
+        @extend %text-preset-3;
+        color: $grey-500;
+        margin-bottom: 6px
+    }
+    &__card-description {
+        @extend %text-preset-5;
+        color: $grey-400;
+        margin-bottom: 32px;
+    }
+    &__card-image {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+    }
+}
+        
+.card {
+    &--supervisor {
+        grid-column: 1;
+        grid-row: 1 / span 2;
+        align-self: center;
+        border-top: solid 4px $cyan;
+    }
+    &--team-builder {
+        grid-column: 2;
+        grid-row: 1;
+        border-top: solid 4px $red;
+    }
+    &--karma {
+        grid-column: 2;
+        grid-row: 2;
+        border-top: solid 4px $orange;
+    }
+    &--calculator {
+        grid-column: 3;
+        grid-row: 1 / span 2;
+        align-self: center;
+        border-top: solid 4px $blue;
     }
 }
 
-.card {
-    &--supervisor {
-        @include card-style($cyan, 1)
-    }
-}
-    */
+
+
